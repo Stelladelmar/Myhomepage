@@ -9,6 +9,15 @@ function getNumberOrString(value) {
     return number_value
   }
 }
+
+
+
+
+
+document.getElementById('button').addEventListener('click', (event) => {
+  window.speechSynthesis.speak(new SpeechSynthesisUtterance(getNumberOrString(document.getElementById('text').value)));
+
+});
 var click_count;
 
 
@@ -18,12 +27,5 @@ click_count = 0;
 document.getElementById('button').addEventListener('click', (event) => {
   click_count = (typeof click_count === 'number' ? click_count : 0) + 1;
   event.target.innerText = click_count;
-
-});
-
-
-
-document.getElementById('button').addEventListener('click', (event) => {
-  window.speechSynthesis.speak(new SpeechSynthesisUtterance(getNumberOrString(document.getElementById('text').value)));
 
 });
