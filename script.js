@@ -50,5 +50,79 @@ document.getElementById('forward').addEventListener('click', (event) => {
   element_image3.setAttribute("src", pictures.shift());
 
 });
+var foods, item;
+
+
+foods = ['Peanut Butter', 'Tofu', 'Eggs', 'Rice', 'Spinach', 'Carrot'];
+let element_products = document.getElementById('products');
+foods.forEach((item) => {
+  let new_li = document.createElement('li');
+  new_li.innerText = item;
+  let new_span = document.createElement('span');
+  let new_button = document.createElement('button');
+  new_button.innerText = 'Add to Cart';
+  new_button.setAttribute("id", item);
+
+  new_span.appendChild(new_button);
+
+  new_li.appendChild(new_span);
+
+  element_products.appendChild(new_li);
+});
+
+
+document.getElementById('Peanut Butter').addEventListener('click', (event) => {
+  let element_store = document.getElementById('store');
+  let new_li2 = document.createElement('li');
+  new_li2.innerText = 'Peanut butter';
+
+  element_store.appendChild(new_li2);
+
+});
+
+document.getElementById('Tofu').addEventListener('click', (event) => {
+  let element_store2 = document.getElementById('store');
+  let new_li3 = document.createElement('li');
+  new_li3.innerText = 'Tofu';
+
+  element_store2.appendChild(new_li3);
+
+});
+
+document.getElementById('Eggs').addEventListener('click', (event) => {
+  let element_store3 = document.getElementById('store');
+  let new_li4 = document.createElement('li');
+  new_li4.innerText = 'Eggs';
+
+  element_store3.appendChild(new_li4);
+
+});
+
+document.getElementById('Rice').addEventListener('click', (event) => {
+  let element_store4 = document.getElementById('store');
+  let new_li5 = document.createElement('li');
+  new_li5.innerText = 'Rice';
+
+  element_store4.appendChild(new_li5);
+
+});
+
+document.getElementById('Spinach').addEventListener('click', (event) => {
+  let element_store5 = document.getElementById('store');
+  let new_li6 = document.createElement('li');
+  new_li6.innerText = 'Spinach';
+
+  element_store5.appendChild(new_li6);
+
+});
+
+document.getElementById('Carrot').addEventListener('click', (event) => {
+  let element_store6 = document.getElementById('store');
+  let new_li7 = document.createElement('li');
+  new_li7.innerText = 'Carrot';
+
+  element_store6.appendChild(new_li7);
+
+});
 
 
